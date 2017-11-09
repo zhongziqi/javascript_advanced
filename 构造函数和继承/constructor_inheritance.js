@@ -45,7 +45,9 @@ function son(fortune){
 }
 var agency = function(){}
 agency.prototype = father.prototype;
+// agency.prototype.constructor = agency;
 son.prototype = new agency();
+// console.log(son.prototype);
 son.prototype.constructor = son;
 var son_inhetirance = new son('全自动凤凰牌单车');
 console.log(son_inhetirance);
