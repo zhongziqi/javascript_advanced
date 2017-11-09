@@ -45,12 +45,12 @@ function son(fortune){
 }
 var agency = function(){}
 agency.prototype = father.prototype;
-// agency.prototype.constructor = agency;
 son.prototype = new agency();
-// console.log(son.prototype);
 son.prototype.constructor = son;
 var son_inhetirance = new son('全自动凤凰牌单车');
-console.log(son_inhetirance);
+// console.log(son_inhetirance);
+// __proto__这个又是什么鬼，目前我也还不清楚这事什么操作
+console.log(son_inhetirance.__proto__.money);
 
 
 
